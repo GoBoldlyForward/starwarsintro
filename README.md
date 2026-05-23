@@ -60,9 +60,9 @@ This plugin is undergoing modernization. Tracked work:
 - [x] README
 - [x] `package.json`
 - [x] Update CSS header (rebrand Polar Notion → Go Boldly Forward)
-- [ ] Remove legacy artifacts (`.DS_Store`, `starwarsintro.css.zip`)
-- [ ] Strip obsolete vendor prefixes (`-webkit/-moz/-ms/-o`)
-- [ ] Update demo page (drop legacy jQuery + Bootstrap, remove Polar Notion branding)
+- [x] Remove legacy artifacts (`.DS_Store`, `starwarsintro.css.zip`)
+- [x] Strip obsolete vendor prefixes (`-webkit/-moz/-ms/-o`) and fix broken gradient syntax
+- [x] Update demo page (drop legacy jQuery + Bootstrap, drop JotForm, native smooth-scroll, rebrand)
 - [ ] Rename — required before npm publish (Disney IP)
 - [ ] Publish to npm
 - [ ] Optional Rails gem wrapper

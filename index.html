@@ -1,325 +1,127 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="StarWarsIntro.css : The Star Wars Intro Crawl in Pure CSS" />
-  <meta property="og:description" content="Make great intros to awesome Star Wars tools online. Use StarWarsIntro.css to create The Star Wars Intro Crawl effect." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://polarnotion.github.io/starwarsintro/" />
-  <meta property="og:image" content="http://polarnotion.github.io/starwarsintro/star-wars-intro-crawl-image.jpg" />
+  <title>starwarsintro.css — Star Wars intro crawl in pure CSS</title>
+  <meta name="description" content="A pure CSS library for creating a Star Wars-style intro crawl. No JavaScript dependencies.">
 
-  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  
+  <meta property="og:title" content="starwarsintro.css — Star Wars intro crawl in pure CSS">
+  <meta property="og:description" content="A pure CSS library for creating a Star Wars-style intro crawl. No JavaScript dependencies.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://goboldlyforward.github.io/starwarsintro/">
+  <meta property="og:image" content="https://goboldlyforward.github.io/starwarsintro/star-wars-intro-crawl-image.jpg">
+
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="starwarsintro.css">
-  <title>Star Wars Intro</title>
 
-  <style type="text/css">
-    body, h1, h2, h3, h4, h5, h6, p, a, td, li, .btn {
-      font-family: 'Lato', Helvetica, sans-serif;
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      color: #222;
+      line-height: 1.5;
     }
-
-    .pad {
-      padding: 60px 10px; 
+    .container { max-width: 720px; margin: 0 auto; padding: 4rem 1.5rem; }
+    h1, h2, h3 { font-weight: 700; line-height: 1.2; }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.5rem; margin-top: 2.5rem; }
+    p.lead { font-size: 1.2rem; color: #555; }
+    pre {
+      background: #f4f4f6;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+      font-size: 0.9rem;
     }
-    .container {
-      max-width: 900px;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      font-weight: 700;
-    }
-    h1 {
-      font-size: 45px;
-      line-height: 55px;
-    }
-    h2 {
-      font-size: 35px;
-      line-height: 45px;
-      margin-top: 60px;
-    }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    a { color: #1a73e8; }
     footer {
-      background-color: #111;
-      padding: 40px 20px;
-      color: white;
+      background: #111;
+      color: #fff;
+      padding: 2rem 1.5rem;
+      text-align: center;
     }
-    footer a {
-      color: white;
-    }
-    footer a:hover,
-    footer a:active,
-    footer a:focus {
-      color: white;
-      text-decoration: none;
-      opacity: .7;
-    }
-    .btn-white-outline {
-      background-color: transparent;
-      border-color: white;
-      border-width: 2px;
-      color: white;
-    }
-
-    .btn.btn-white-outline:hover,
-    .btn.btn-white-outline:active,
-    .btn.btn-white-outline:focus {
-      background-color: white;
-      border-color: white;
-      color: #FF5E52;
-      box-shadow: none;
-    }
-
-    .btn-primary-outline {
-      background-color: transparent;
-      border-color: #FF5E52;
-      border-width: 2px;
-      color: #FF5E52;
-    }
-    .container-md {
-      max-width: 500px;
-    }
-    .download-wrapper {
-      position: absolute;
-      right: 15px;
-      top: 15px;
-      z-index: 999999999;
-    }
-    .btn-outline {
-      border: 2px solid #EBD71C;
-      color: #EBD71C;
-      font-weight: bold;
-      text-transform: uppercase;
-      padding: 10px 20px;
-    }
-    .btn-outline:hover,
-    .btn-outline:active,
-    .btn-outline:focus {
-      background-color: #EBD71C;
-      color: black;
-    }
+    footer a { color: #fff; opacity: 0.85; }
   </style>
 </head>
 <body>
-  <!-- <div class="download-wrapper">
-    <a href="starwarsintro.css.zip" class="btn btn-outline">Download CSS</a>
-  </div> -->
+
   <div class="star-wars-intro">
 
-    <!-- Blue Intro Text -->
-    <p class="intro-text">
-      A few days ago, during...
-    </p>
+    <p class="intro-text">A few days ago, during...</p>
 
-    <!-- Logo Image or Text goes in here -->
     <h2 class="main-logo">
-      <img src="img/star-wars-intro.png">
+      <img src="img/star-wars-intro.png" alt="">
     </h2>
 
-    <!-- All Scrolling Content Goes in here -->
     <div class="main-content">
-
       <div class="title-content">
-        <p class="content-header">StarWarsIntro.css<br>A New Crawl</p>
-
+        <p class="content-header">starwarsintro.css<br>A New Crawl</p>
         <br>
-
         <p class="content-body">
-          After years of galactic silence, civilization is on the brink of more Star Wars movies. Now, with the Force already awaken, the people of Earth seek solace in creating websites, memes, and presentations that need the intro crawl we've come to know and love. Make cooler stuff, faster, with our simple CSS library for the Star Wars Intro Crawl.
+          After years of galactic silence, civilization is on the brink of more Star Wars movies. Now, with the Force already awakened, the people of Earth seek solace in creating websites, memes, and presentations that need the intro crawl we've come to know and love. Make cooler stuff, faster, with our simple CSS library for the Star Wars intro crawl.
         </p>
-
         <br>
-
-        <!-- button or link or whatever -->
-        <a href="#welcome" class="space-button">Download StarWarsIntro.css</a>
-          
+        <a href="#about" class="space-button">Get starwarsintro.css</a>
       </div>
     </div>
   </div>
 
-  <section id="welcome">
+  <section id="about">
     <div class="container">
-      <div class="pad">
-        <h1 class="text-center">StarWarsIntro.css</h1>
-        <p class="text-center lead">A CSS Library for the Star Wars Intro Crawl</p>
+      <h1>starwarsintro.css</h1>
+      <p class="lead">A pure CSS library for the Star Wars-style intro crawl. No JavaScript dependencies.</p>
 
-        <p class="text-center">
-          <a href="starwarsintro.css.zip" class="btn btn-outline">Download CSS</a>
-          <a href="https://www.producthunt.com/tech/starwarsintro-css" target="_blank" class="btn btn-outline">Product Hunt</a>
-        </p>
+      <h2>What it is</h2>
+      <p>Drops a Star Wars-style scrolling intro crawl onto any page using pure CSS animations. Use it for fan sites, movie marathons, browser-game intros, presentations — anywhere the recognizable crawl effect fits.</p>
 
-        <h2 id="examples">What is this?</h2>
-        <p class="lead">Star Wars Intro is a small CSS Library to build your own Star Wars-esk intro. Use it for a movie marathon you're hosting, a browser game intro, a fan site, or pretty much anything else. If you're not interested in Star Wars and/or think it's lame, we've included <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target="_blank">something you might find interesting.</a></p>
+      <h2>Requirements</h2>
+      <p>HTML and CSS. That's it — no JavaScript, no other dependencies.</p>
 
-        <h2 id="requirements">Requirements</h2>
-        <div class="row">
-          <div class="col-sm-6">
-            <p class="lead">To install the Star Wars Into you'll need:</p>
-            <ul class="lead">
-              <li>HTML</li>
-              <li>CSS</li>
-            </ul>
-          </div>
-          <div class="col-sm-6">
-            <blockquote class="lead">
-              That's right, the Star Wars Intro doesn't require and javascript or other dependancies.
-            </blockquote>
-          </div>
-        </div>
+      <h2>Install</h2>
+      <p>Download <a href="starwarsintro.css">starwarsintro.css</a> from this repo. (An npm package is coming, pending a rename.)</p>
 
-        <h2 id="install">Installation</h2>
-        <p class="lead">The installation process is simple. <b><a href='starwarsintro.css.zip'>Download the css file</a></b> and <b><a href="#install_html">add the html sample</a></b>. You can put anything you want inside of the 'content-body'. The CSS will do the rest.</p>
-
-        <pre id="install_html" class="well">
-&lt;!-- Place in document head --&gt;
+      <h2>Usage</h2>
+      <pre><code>&lt;!-- In document head --&gt;
 &lt;link rel="stylesheet" href="/path/to/starwarsintro.css"&gt;
 
-&lt;!-- Place in Body where you'd like intro to appear --&gt;
+&lt;!-- In body where you want the intro --&gt;
 &lt;div class="star-wars-intro"&gt;
 
-  &lt;!-- Blue Intro Text --&gt;
-  &lt;p class="intro-text"&gt;
-    A few days ago, during...
-  &lt;/p&gt;
+  &lt;p class="intro-text"&gt;A few days ago, during...&lt;/p&gt;
 
-  &lt;!-- Logo Image or Text goes in here --&gt;
   &lt;h2 class="main-logo"&gt;
-    &lt;img src="img/star-wars-intro.png"&gt;
+    &lt;img src="img/your-logo.png"&gt;
   &lt;/h2&gt;
 
-  &lt;!-- All Scrolling Content Goes in here --&gt;
   &lt;div class="main-content"&gt;
-
     &lt;div class="title-content"&gt;
-      &lt;p class="content-header"&gt;EPISODES IV-VI&lt;br/&gt;A Movie Marathon&lt;/p&gt;
-
-      &lt;br&gt;
+      &lt;p class="content-header"&gt;EPISODES IV-VI&lt;br&gt;A Movie Marathon&lt;/p&gt;
 
       &lt;p class="content-body"&gt;
-        After years of galactic silence, civilization is on the brink of a new Star Wars release. Now, with the Force preparing to awaken, the people of Earth seek solace in films of old. With nowhere to turn, they gather in great numbers and watch the original trilogy without rest. Three films. 6 hours. 24 minutes. Popcorn. Slushies. Total elation.
+        Your scrolling story here…
       &lt;/p&gt;
-
-      &lt;!-- button or link or whatever --&gt;
-      &lt;a href="./StarScroll.zip" class="space-button"&gt;Download The Code Now!&lt;/a&gt;
-        
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;</code></pre>
 
-        <div class="text-center">
-          <em class="lead">May the Force be with you</em> 
-        </div>
-      </div>
+      <p>You'll also need a star-field background image at <code>img/stars-bg.jpg</code> (included in this repo).</p>
+
+      <h2>License</h2>
+      <p>MIT. See <a href="https://github.com/GoBoldlyForward/starwarsintro/blob/master/LICENSE">LICENSE</a>.</p>
     </div>
   </section>
 
-  <section id="subscription_footer">
-    <style type="text/css">
-      #subscription_footer {
-        padding: 40px;
-        background-color: #222;
-        color: white;
-      }
-      #subscription_footer label {
-        color: white;
-        text-transform: uppercase;
-        font-size: 12px;
-      }
-      #subscription_footer h2 {
-        color: white;
-      }
-      #subscription_footer h2::after {
-        content: " ";
-        border-bottom: 1px solid white;
-        width: 100px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        padding-bottom: 10px;
-      }
-      #subscription_footer .btn-white-outline.btn-lg {
-        text-transform: uppercase;
-      }
-      #subscription_footer .btn-white-outline.btn-lg:hover,
-      #subscription_footer .btn-white-outline.btn-lg:active {
-        color: #222;
-        text-transform: uppercase;
-      }
-    </style>
-    <div class="container container-md">
-      <h2 class="text-center">Get more free plugins.</h2>
-      <p class="text-center text-white lead">Let us send more free stuff, right to your inbox.</p>
-      <form class="jotform-form" action="https://submit.jotformpro.com/submit/61093322709958/" method="post" name="form_61093322709958" id="61093322709958" accept-charset="utf-8"> 
-        <input type="hidden" name="formID" value="61093322709958" />
-        <div class="form-all">
-          <div class="form-section page-section">
-            <!-- <div class="form-line form-group" data-type="control_textbox" id="id_4">
-              <label class="form-label form-label-top" id="label_4" for="input_4"> Name </label>
-              <div id="cid_4" class="form-input-wide jf-required">
-                <input type="text" class="form-control form-textbox" data-type="input-textbox" id="input_4" name="q4_name" size="20" value="" />
-              </div>
-            </div> -->
-            <div class="form-line form-group jf-required" data-type="control_email" id="id_3">
-              <label class="form-label form-label-top" id="label_3" for="input_3"> Email <span class="form-required"> * </span></label>
-              <div id="cid_3" class="form-input-wide jf-required">
-                <input type="email" class="form-control form-textbox validate[required, Email]" id="input_3" name="q3_email3" size="30" value="" />
-              </div>
-            </div>
-            <div class="form-line form-group text-center" data-type="control_button" id="id_2">
-              <div id="cid_2" class="form-input-wide">
-                <div class="form-buttons-wrapper">
-                  <button id="input_2" type="submit" class="form-submit-button btn btn-white-outline btn-lg"> Submit </button>
-                </div>
-              </div>
-            </div>
-            <div style="display:none">
-              Should be Empty: <input type="text" name="website" value="" />
-            </div>
-          </div>
-        </div>
-        <input type="hidden" id="simple_spc" name="simple_spc" value="61093322709958" />
-        <script type="text/javascript"> document.getElementById("si" + "mple" + "_spc").value = "61093322709958-61093322709958"; </script>
-      </form>
-    </div>
-  </section>
-
-  <footer class="text-center">
-    <div class="container">
-      <iframe src="https://ghbtns.com/github-btn.html?user=polarnotion&repo=starwarsintro&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
-      <iframe src="https://ghbtns.com/github-btn.html?user=polarnotion&type=follow&count=true&size=small" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-      <br>
-      <br>
-      <p>
-        <a href="http://polarnotion.com/?ref=starwarsintro" class="text-white" target="_blank">
-          Built by Polar Notion
-          <br>
-          <em>Go Boldly Forward</em>
-        </a>
-      </p>
-    </div>
+  <footer>
+    <p>
+      Built by <a href="https://goboldlyforward.com/">Go Boldly Forward</a> ·
+      <a href="https://github.com/GoBoldlyForward/starwarsintro">GitHub</a>
+    </p>
   </footer>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html, body').animate({
-              scrollTop: target.offset().top
-            }, 1000);
-            return false;
-          }
-        }
-      });
-    });
-  </script>
 
 </body>
 </html>
