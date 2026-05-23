@@ -132,10 +132,14 @@
 
   <footer class="gbf-footer">
     <div class="gbf-container gbf-footer__row">
-      <span>MIT &middot; <a href="https://github.com/GoBoldlyForward">Go Boldly Forward</a></span>
+      <span>&copy; <span id="current-year"></span> by <a href="https://morganjlopes.com">Morgan Lopes</a>. <a href="https://www.goboldlyforward.com">Go Boldly Forward!</a></span>
       <span>v1.1.0 &middot; <a href="https://github.com/GoBoldlyForward/starwarsintro">GitHub</a></span>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
