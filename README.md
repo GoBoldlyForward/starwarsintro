@@ -2,7 +2,7 @@
 
 A pure CSS library for creating a Star Wars-style intro crawl. No JavaScript dependencies.
 
-> **Note on naming:** the current name uses a third-party trademark and will be renamed before npm publication. See [Roadmap](#roadmap).
+> **Note on naming:** the name references a third-party trademark. Kept as-is — this is a non-commercial homage plugin, low risk in practice.
 
 ## Demo
 
@@ -63,9 +63,8 @@ This plugin is undergoing modernization. Tracked work:
 - [x] Remove legacy artifacts (`.DS_Store`, `starwarsintro.css.zip`)
 - [x] Strip obsolete vendor prefixes (`-webkit/-moz/-ms/-o`) and fix broken gradient syntax
 - [x] Update demo page (drop legacy jQuery + Bootstrap, drop JotForm, native smooth-scroll, rebrand)
-- [ ] Rename — required before npm publish (Disney IP)
-- [ ] Publish to npm
-- [ ] Optional Rails gem wrapper
+- [ ] Publish to npm (as `@goboldlyforward/starwarsintro`)
+- [ ] Optional `starwarsintro-rails` gem wrapper
 - [ ] GitHub Actions CI (stylelint)
 
 ## License
