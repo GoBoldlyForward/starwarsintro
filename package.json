@@ -1,0 +1,29 @@
+{
+  "name": "starwarsintro",
+  "version": "1.0.0",
+  "description": "A pure CSS library for creating a Star Wars-style intro crawl. No JavaScript dependencies.",
+  "main": "starwarsintro.css",
+  "style": "starwarsintro.css",
+  "files": [
+    "starwarsintro.css",
+    "img/",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoBoldlyForward/starwarsintro.git"
+  },
+  "keywords": [
+    "css",
+    "animation",
+    "crawl",
+    "intro"
+  ],
+  "author": "Go Boldly Forward",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GoBoldlyForward/starwarsintro/issues"
+  },
+  "homepage": "https://goboldlyforward.github.io/starwarsintro/"
+}

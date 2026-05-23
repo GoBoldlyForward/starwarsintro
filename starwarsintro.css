@@ -1,11 +1,12 @@
-/*
-Name: StarWarsIntro.css
-URI: polarnotion.github.io/starwarsintro
-Author: Polar Notion
-Author URI: http://polarnotion.com/
-Description: A simple CSS library for creating a Star Wars Intro Crawl. May the Force be with you.
-Version: 1.0
-*/
+/*!
+ * starwarsintro.css
+ * A pure CSS library for creating a Star Wars-style intro crawl. No JavaScript dependencies.
+ *
+ * Version: 1.0.0
+ * Author: Go Boldly Forward (https://goboldlyforward.com/)
+ * Homepage: https://goboldlyforward.github.io/starwarsintro/
+ * License: MIT
+ */
 
 body, html{
   height: 100%;
