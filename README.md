@@ -63,6 +63,7 @@ This plugin is undergoing modernization. Tracked work:
 - [x] Remove legacy artifacts (`.DS_Store`, `starwarsintro.css.zip`)
 - [x] Strip obsolete vendor prefixes (`-webkit/-moz/-ms/-o`) and fix broken gradient syntax
 - [x] Update demo page (drop legacy jQuery + Bootstrap, drop JotForm, native smooth-scroll, rebrand)
+- [x] Refresh demo with the shared Go Boldly Forward plugin design system (light + dark, Inter, `.gbf-*` markup, yellow accent)
 - [ ] Publish to npm (as `@goboldlyforward/starwarsintro`)
 - [ ] Optional `starwarsintro-rails` gem wrapper
 - [ ] GitHub Actions CI (stylelint)

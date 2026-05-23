@@ -14,82 +14,93 @@
   <meta property="og:image" content="https://goboldlyforward.github.io/starwarsintro/star-wars-intro-crawl-image.jpg">
 
   <link rel="shortcut icon" type="image/png" href="favicon.png">
+
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <link rel="stylesheet" href="starwarsintro.css">
+  <link rel="stylesheet" href="demo.css">
 
   <style>
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      color: #222;
-      line-height: 1.5;
+    /* Yellow accent — matches the crawl text */
+    :root {
+      --gbf-accent:      #ca8a04;                    /* yellow-600 */
+      --gbf-accent-soft: rgba(202, 138, 4, 0.10);
     }
-    .container { max-width: 720px; margin: 0 auto; padding: 4rem 1.5rem; }
-    h1, h2, h3 { font-weight: 700; line-height: 1.2; }
-    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    h2 { font-size: 1.5rem; margin-top: 2.5rem; }
-    p.lead { font-size: 1.2rem; color: #555; }
-    pre {
-      background: #f4f4f6;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      overflow-x: auto;
-      font-size: 0.9rem;
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --gbf-accent:      #facc15;                  /* yellow-400 */
+        --gbf-accent-soft: rgba(250, 204, 21, 0.14);
+      }
     }
-    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-    a { color: #1a73e8; }
-    footer {
-      background: #111;
-      color: #fff;
-      padding: 2rem 1.5rem;
-      text-align: center;
+
+    /* starwarsintro.css sets `html, body { height: 100% }` so the crawl
+     * can fill the viewport. The demo page needs scrollable height, so
+     * release that constraint here. The crawl is scoped to .crawl-stage
+     * below, which gives it the box it expects. */
+    html, body { height: auto; }
+
+    .gbf-canvas--bleed { padding: 0; overflow: hidden; }
+    .crawl-stage {
+      position: relative;
+      width: 100%;
+      height: 75vh;
+      min-height: 480px;
+      background: #000;
     }
-    footer a { color: #fff; opacity: 0.85; }
+    .crawl-stage > .star-wars-intro { position: absolute; inset: 0; }
   </style>
 </head>
 <body>
 
-  <div class="star-wars-intro">
+  <header class="gbf-header">
+    <div class="gbf-container">
+      <p class="gbf-eyebrow">Plugin</p>
+      <h1 class="gbf-title">starwarsintro<span class="gbf-title__accent">.css</span></h1>
+      <p class="gbf-tagline">A pure CSS library for the Star Wars-style intro crawl. No JavaScript, no other dependencies — just one stylesheet and the markup below.</p>
+      <code class="gbf-install">npm install @goboldlyforward/starwarsintro</code>
+      <nav class="gbf-nav">
+        <a href="https://github.com/GoBoldlyForward/starwarsintro">GitHub</a>
+        <a href="https://www.npmjs.com/package/@goboldlyforward/starwarsintro">npm</a>
+        <a href="https://github.com/GoBoldlyForward/starwarsintro#readme">Docs</a>
+        <a href="https://github.com/GoBoldlyForward/starwarsintro/blob/master/CHANGELOG.md">Changelog</a>
+      </nav>
+    </div>
+  </header>
 
-    <p class="intro-text">A few days ago, during...</p>
-
-    <h2 class="main-logo">
-      <img src="img/star-wars-intro.png" alt="">
-    </h2>
-
-    <div class="main-content">
-      <div class="title-content">
-        <p class="content-header">starwarsintro.css<br>A New Crawl</p>
-        <br>
-        <p class="content-body">
-          After years of galactic silence, civilization is on the brink of more Star Wars movies. Now, with the Force already awakened, the people of Earth seek solace in creating websites, memes, and presentations that need the intro crawl we've come to know and love. Make cooler stuff, faster, with our simple CSS library for the Star Wars intro crawl.
-        </p>
-        <br>
-        <a href="#about" class="space-button">Get starwarsintro.css</a>
+  <section class="gbf-section">
+    <div class="gbf-container">
+      <p class="gbf-eyebrow gbf-eyebrow--accent">Demo</p>
+      <h2 class="gbf-section__title">A new crawl</h2>
+      <p class="gbf-section__lede">The text, the timing, and the title screen are yours. The plugin handles the perspective scroll and the star-field backdrop.</p>
+      <div class="gbf-canvas gbf-canvas--bleed">
+        <div class="crawl-stage">
+          <div class="star-wars-intro">
+            <p class="intro-text">A few days ago, during...</p>
+            <h2 class="main-logo">
+              <img src="img/star-wars-intro.png" alt="">
+            </h2>
+            <div class="main-content">
+              <div class="title-content">
+                <p class="content-header">starwarsintro.css<br>A New Crawl</p>
+                <br>
+                <p class="content-body">
+                  After years of galactic silence, civilization is on the brink of more Star Wars movies. Now, with the Force already awakened, the people of Earth seek solace in creating websites, memes, and presentations that need the intro crawl we've come to know and love. Make cooler stuff, faster, with our simple CSS library for the Star Wars intro crawl.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <section id="about">
-    <div class="container">
-      <h1>starwarsintro.css</h1>
-      <p class="lead">A pure CSS library for the Star Wars-style intro crawl. No JavaScript dependencies.</p>
+  <section class="gbf-section">
+    <div class="gbf-container">
+      <p class="gbf-eyebrow gbf-eyebrow--accent">Usage</p>
+      <h2 class="gbf-section__title">Drop it in</h2>
+      <p class="gbf-section__lede">One stylesheet, the markup pattern below, and a star-field background image (one is included at <code>img/stars-bg.jpg</code>).</p>
+      <pre class="gbf-code"><code>&lt;link rel="stylesheet" href="path/to/starwarsintro.css"&gt;
 
-      <h2>What it is</h2>
-      <p>Drops a Star Wars-style scrolling intro crawl onto any page using pure CSS animations. Use it for fan sites, movie marathons, browser-game intros, presentations — anywhere the recognizable crawl effect fits.</p>
-
-      <h2>Requirements</h2>
-      <p>HTML and CSS. That's it — no JavaScript, no other dependencies.</p>
-
-      <h2>Install</h2>
-      <p>Download <a href="starwarsintro.css">starwarsintro.css</a> from this repo. (An npm package is coming, pending a rename.)</p>
-
-      <h2>Usage</h2>
-      <pre><code>&lt;!-- In document head --&gt;
-&lt;link rel="stylesheet" href="/path/to/starwarsintro.css"&gt;
-
-&lt;!-- In body where you want the intro --&gt;
 &lt;div class="star-wars-intro"&gt;
 
   &lt;p class="intro-text"&gt;A few days ago, during...&lt;/p&gt;
@@ -101,26 +112,29 @@
   &lt;div class="main-content"&gt;
     &lt;div class="title-content"&gt;
       &lt;p class="content-header"&gt;EPISODES IV-VI&lt;br&gt;A Movie Marathon&lt;/p&gt;
-
       &lt;p class="content-body"&gt;
         Your scrolling story here…
       &lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-
-      <p>You'll also need a star-field background image at <code>img/stars-bg.jpg</code> (included in this repo).</p>
-
-      <h2>License</h2>
-      <p>MIT. See <a href="https://github.com/GoBoldlyForward/starwarsintro/blob/master/LICENSE">LICENSE</a>.</p>
     </div>
   </section>
 
-  <footer>
-    <p>
-      Built by <a href="https://goboldlyforward.com/">Go Boldly Forward</a> ·
-      <a href="https://github.com/GoBoldlyForward/starwarsintro">GitHub</a>
-    </p>
+  <section class="gbf-section">
+    <div class="gbf-container">
+      <p class="gbf-eyebrow gbf-eyebrow--accent">Notes</p>
+      <h2 class="gbf-section__title">Pure CSS</h2>
+      <p class="gbf-section__lede">No JavaScript, no other dependencies. The crawl is a CSS <code>@keyframes</code> animation over a <code>perspective</code>-projected stage. The whole library is one ~3&nbsp;KB file.</p>
+      <p class="gbf-section__lede">The plugin sizes itself to fill its parent. On the demo above we scope it into a 75vh tall stage; in your page, place it inside any positioned element of your choice.</p>
+    </div>
+  </section>
+
+  <footer class="gbf-footer">
+    <div class="gbf-container gbf-footer__row">
+      <span>MIT &middot; <a href="https://github.com/GoBoldlyForward">Go Boldly Forward</a></span>
+      <span>v1.1.0 &middot; <a href="https://github.com/GoBoldlyForward/starwarsintro">GitHub</a></span>
+    </div>
   </footer>
 
 </body>

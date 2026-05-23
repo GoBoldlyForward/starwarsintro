@@ -1,6 +1,6 @@
 {
   "name": "@goboldlyforward/starwarsintro",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A pure CSS library for creating a Star Wars-style intro crawl. No JavaScript dependencies.",
   "main": "starwarsintro.css",
   "style": "starwarsintro.css",
@@ -8,7 +8,8 @@
     "starwarsintro.css",
     "img/",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "repository": {
     "type": "git",
