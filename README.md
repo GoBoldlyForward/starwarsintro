@@ -14,13 +14,21 @@ Drops a Star Wars-style scrolling intro crawl onto any page using pure CSS anima
 
 ## Install
 
-For now, download `starwarsintro.css` from this repo. (npm publication is pending a rename — see Roadmap.)
-
-```html
-<link rel="stylesheet" href="path/to/starwarsintro.css">
+```bash
+npm install @goboldlyforward/starwarsintro
 ```
 
-You'll also need a star-field background image at `img/stars-bg.jpg` (included in this repo).
+```css
+@import "@goboldlyforward/starwarsintro/starwarsintro.css";
+```
+
+Or link it straight from a CDN — the star-field background (`img/stars-bg.jpg`) ships with the package and loads automatically:
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/@goboldlyforward/starwarsintro/starwarsintro.css">
+```
+
+The stylesheet references `img/stars-bg.jpg` relatively, so if you self-host, keep that image next to the CSS (both are in this repo).
 
 ## Usage
 
@@ -64,7 +72,7 @@ This plugin is undergoing modernization. Tracked work:
 - [x] Strip obsolete vendor prefixes (`-webkit/-moz/-ms/-o`) and fix broken gradient syntax
 - [x] Update demo page (drop legacy jQuery + Bootstrap, drop JotForm, native smooth-scroll, rebrand)
 - [x] Refresh demo with the shared Go Boldly Forward plugin design system (light + dark, Inter, `.gbf-*` markup, yellow accent)
-- [ ] Publish to npm (as `@goboldlyforward/starwarsintro`)
+- [x] Publish to npm (as `@goboldlyforward/starwarsintro`)
 - [ ] Optional `starwarsintro-rails` gem wrapper
 - [ ] GitHub Actions CI (stylelint)
 

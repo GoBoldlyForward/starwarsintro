@@ -6,7 +6,7 @@
   "style": "starwarsintro.css",
   "files": [
     "starwarsintro.css",
-    "img/",
+    "img/stars-bg.jpg",
     "README.md",
     "LICENSE",
     "CHANGELOG.md"
